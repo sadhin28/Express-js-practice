@@ -9,6 +9,9 @@ app.get('/',(req,res)=>{
 app.get('/data',(req,res)=>{
     res.send('Taosif Bin Sadhin')
 })
+app.get('/appdata',(req,res)=>{
+    res.send('App Data')
+})
 app.listen(port,()=>{
     console.log(`My first server is running on post : ${port}`)
 })
