@@ -17,6 +17,14 @@ app.get('/phones',(req,res)=>{
     res.send(phones)    
 })
 
+app.get('/phones/:id',(req,res)=>{
+    const id = req.params.id;
+    const ids=parseInt(id)
+    console.log('id tata for id: ',ids)
+    const phone = phones.find(phone=>phone.id === ids) || {};
+    res.send(phone)
+})
+
 app.listen(port,()=>{
     console.log(`My first server is running on post : ${port}`)
 })
